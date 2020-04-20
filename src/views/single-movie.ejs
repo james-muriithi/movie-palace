@@ -67,13 +67,9 @@
                                                                 <li><span>Running time:</span>
                                                                     <%- data.runtime %> <span> min</span></li>
                                                                 <li><span>Country:</span>
-                                                                    <% let length = 3 %>
-                                                                        <% if (data.production_countries.toString().length < length) { %>
-                                                                            <% length = data.production_countries.toString().length %>
-                                                                                <% } %>
-                                                                                    <a href="#" class="genre" aria-label="countries">
-                                                                                        <%- data.production_countries.toString().split(',').slice(1, length).join(', ') %>
-                                                                                    </a>
+                                                                    <a href="#" class="genre" aria-label="countries">
+                                                                        <%- data.production_countries.toString().split(',').join(', ') %>
+                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                             <div class="card__description card__description--details">

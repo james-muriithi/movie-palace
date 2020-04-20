@@ -11,6 +11,7 @@ let getMovie = async(id) => {
             res.genres.map(item => { gens.push(item.name) });
             res.production_countries.map(item => { country.push(item.name) });
             res.genres = gens
+            if (country.length > 3) { country = country.slice(1, 3) }
             res.production_countries = country
 
             if (res.keywords) {
