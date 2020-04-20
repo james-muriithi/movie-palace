@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
+<url>
+  <loc>http://moviepalace.herokuapp.com/</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movies</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv-shows</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/about</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/539537</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/664767</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/71446</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/38700</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/181812</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/446893</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/454626</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/443791</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/495764</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/522627</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/592834</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/100757</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/466622</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/567965</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/526019</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/299534</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/63247</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/512200</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/431693</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/449924</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/599975</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/551808</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/570670</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/465086</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/560391</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/567609</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/502416</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/458305</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/417384</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/481848</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/514847</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/501170</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/555974</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/531309</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/566927</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/547012</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/461775</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/31196</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/70523</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/74577</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/66732</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/42009</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/87108</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/60574</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/63351</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/66788</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/67178</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/67744</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/80307</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/86831</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/68421</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/1396</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/69740</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/81356</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/73411</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/72844</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/62560</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/tv/69478</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/338762</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/453405</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/535292</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/384018</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/290859</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/458897</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/338967</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/359724</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/522938</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/448119</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/509967</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/581600</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/522162</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/348350</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/181808</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/429617</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/546554</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/530915</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/287947</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/466272</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/320288</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/475557</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/299537</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/515001</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/419704</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/324857</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/398978</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/373571</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/330459</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/447404</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/508439</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/572593</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/431580</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/536869</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/499701</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/585244</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+<url>
+  <loc>http://moviepalace.herokuapp.com/movie/492611</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2020-04-16</lastmod>
+</url>
+</urlset>

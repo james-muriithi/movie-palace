@@ -1,0 +1,19 @@
+{
+    "name": "Movie Palace",
+    "short_name": "Movie Palace",
+    "icons": [{
+            "src": "icon/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#28282d",
+    "background_color": "#28282d",
+    "display": "standalone",
+    "start_url": "/"
+}
