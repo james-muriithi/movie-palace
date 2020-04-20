@@ -59,7 +59,11 @@
                                                             </div>
                                                             <ul class="card__meta">
                                                                 <li class="genre"><span>Genre:</span>
-                                                                    <%- data.genres.toString().split(',').join(', ') %>
+                                                                    <% let length = 3 %>
+                                                                        <% if (data.genres.split(',').length < length) { %>
+                                                                            <% length = data.genres.split(',').length %>
+                                                                                <% } %>
+                                                                                    <%- data.genres.toString().split(',').slice(1, length).join(', ') %>
                                                                 </li>
                                                                 <li><span>Release date:</span>
                                                                     <%- data.release_date %>
