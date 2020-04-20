@@ -1,0 +1,82 @@
+<!-- header -->
+<header class="header">
+    <div class="header__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__content">
+                        <!-- header logo -->
+                        <a href="/" class="header__logo">
+                            <img src="/img/logo.png" alt="logo" loading="lazy">
+                        </a>
+                        <!-- end header logo -->
+
+                        <!-- header nav -->
+                        <ul class="header__nav">
+                            <!-- dropdown -->
+                            <li class="header__nav-item active">
+                                <a class="header__nav-link active" href="/">Home</a>
+                            </li>
+                            <!-- end dropdown -->
+
+                            <!-- dropdown -->
+                            <li class="header__nav-item">
+                                <a class="header__nav-link" href="/movies">Movies</a>
+                            </li>
+                            <!-- end dropdown -->
+
+                            <li class="header__nav-item">
+                                <a href="/tv-shows" class="header__nav-link">Tv Shows</a>
+                            </li>
+
+                            <!-- dropdown -->
+                            <li class="dropdown header__nav-item">
+                                <a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" aria-label="more" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
+
+                                <ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
+                                    <li><a href="/about">About</a></li>
+                                </ul>
+                            </li>
+                            <!-- end dropdown -->
+                        </ul>
+                        <!-- end header nav -->
+
+                        <!-- header auth -->
+                        <div class="header__auth">
+                            <button class="header__search-btn" type="button" aria-label="search-icon">
+                                <i class="icon ion-ios-search"></i>
+                            </button>
+                        </div>
+                        <!-- end header auth -->
+
+                        <!-- header menu btn -->
+                        <button class="header__btn" type="button" aria-label="menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                        <!-- end header menu btn -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- header search -->
+    <form action="/search/" class="header__search">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__search-content">
+                        <label for="query" id="myLabel" style="display: none;">Search</label>
+                        <input type="text" id="query" aria-labelledby="myLabel" autocomplete="off" placeholder="Search for a movie, TV Series that you are looking for" name="query">
+
+                        <button type="submit" aria-label="search">search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!-- end header search -->
+</header>
+<!-- end header -->

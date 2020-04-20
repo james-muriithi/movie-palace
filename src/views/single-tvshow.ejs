@@ -1,0 +1,312 @@
+<!-- details -->
+<section class="section details">
+    <!-- details background -->
+    <% var background = poster = 'img/covers/posterplaceholder.jpg' %>
+        <% if (typeof data.backdrop_path != 'undefined') { %>
+            <% background = 'https://image.tmdb.org/t/p/original'+data.backdrop_path %>
+                <% } %>
+
+                    <% if (typeof data.poster_path != 'undefined') { %>
+                        <% poster = 'https://image.tmdb.org/t/p/w300'+data.poster_path %>
+                            <% } %>
+                                <div class="details__bg" data-bg="<%- background %> "></div>
+                                <!-- end details background -->
+                                <!-- details content -->
+                                <div class="container">
+                                    <div class="row">
+                                        <!-- content -->
+                                        <div class="col-xl-12">
+                                            <div class="card card--details card--series">
+                                                <div class="row">
+                                                    <!-- card cover -->
+                                                    <div class="col-12 col-sm-4 col-md-4 col-lg-3 col-xl-3">
+                                                        <div class="card__cover my-card">
+                                                            <img src="<%- poster %>" alt="poster" class="lazyload" />
+                                                        </div>
+                                                    </div>
+                                                    <!-- end card cover -->
+                                                    <!-- card content -->
+                                                    <div class="col-12 col-sm-8 col-md-8 col-lg-9 col-xl-9">
+                                                        <div class="card__content my-card">
+                                                            <!-- title -->
+                                                            <div class="col-12 p-l-0">
+                                                                <h1 class="details__title">
+                                                                    <%- data.name %>
+                                                                </h1>
+                                                            </div>
+                                                            <!-- end title -->
+                                                            <div class="card__wrap">
+                                                                <span class="card__rate"><i class="icon ion-ios-star"></i>8.4</span>
+                                                                <ul class="card__list single">
+                                                                    <li>HD</li>
+                                                                    <li class="share-btn" data-title="<%- data.name || '' %> " data-url="/tv/<%- data.id %>">
+                                                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 300 300" xml:space="preserve">
+                                                                        <g id="XMLID_3_">
+                                                                            <path id="XMLID_239_" d="M105.875,150c0,1.025-0.231,1.985-0.293,3.011l107.486,53.744c9.213-7.797,20.98-12.663,33.984-12.663
+                                                                                c29.244,0,52.947,23.698,52.947,52.946C300,276.302,276.297,300,247.053,300c-29.264,0-52.929-23.698-52.929-52.962
+                                                                                c0-1.059,0.228-2.002,0.293-3.032L86.928,190.283c-9.24,7.764-20.978,12.63-33.982,12.63C23.699,202.913,0,179.231,0,150
+                                                                                c0-29.262,23.699-52.962,52.945-52.962c13.005,0,24.754,4.883,33.982,12.646l107.489-53.726c-0.065-1.025-0.293-1.987-0.293-3.046
+                                                                                C194.124,23.7,217.789,0,247.053,0C276.297,0,300,23.7,300,52.913c0,29.267-23.703,52.963-52.947,52.963
+                                                                                c-13.037,0-24.787-4.886-33.984-12.68l-107.486,53.763C105.644,147.984,105.875,148.942,105.875,150L105.875,150z M105.875,150" fill="#ff55a5" />
+                                                                        </g>
+                                                                        
+                                                                        </svg>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <ul class="card__meta">
+                                                                <li class="genre"><span>Genre:</span>
+
+                                                                    <a href="javascript:void(0)">
+                                                                        <%- data.genres.toString().split(',').join(', ') %>
+                                                                    </a>
+                                                                </li>
+                                                                <li><span>First air date: </span>
+
+                                                                    <%- data.first_air_date %>
+
+                                                                </li>
+                                                                <li><span>Last air date: </span>
+
+                                                                    <%- data.last_air_date %>
+
+
+                                                                </li>
+                                                                <li><span>No of seasons: </span>
+                                                                    <%- data.number_of_seasons %>
+                                                                </li>
+                                                                <li><span>Total episodes : </span>
+                                                                    <%- data.number_of_episodes %>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="card__description card__description--details">
+                                                                <%- data.overview %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- end card content -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- end content -->
+
+                                        <!-- accordion -->
+                                        <div class="col-12 col-xl-7">
+                                            <div class="accordion" id="accordion">
+                                                <% data.seasons.forEach((element, index) => { %>
+                                                    <div class="accordion__card">
+                                                        <div class="card-header" id="heading<%- element.id %>">
+                                                            <button type="button" data-toggle="collapse" data-target="#collapse<%- element.id %>" aria-expanded="<%- index == 0 %>" aria-controls=" collapse<%- element.id %>">
+                                                             <span>Season: <%- " "+element.season_number %></span>
+                                                            <span>
+                                                                Episodes: <%- " "+element.episode_count+"  " %>   Aired on  <%- " "+element.air_date %>
+                                                            </span>
+                                                        </button>
+                                                        </div>
+
+                                                        <div id="collapse<%- element.id %>" class="collapse <%- index == 0 ? 'show': '' %>" aria-labelledby="heading<%- element.id %>" data-parent="#accordion">
+                                                            <div class="card-body">
+                                                                <%- data.seasons.overview %>
+                                                                    <!-- <table class="accordion__list">
+                                                                    <thead>
+                                                                        <tr>
+                                                                            <th>#</th>
+                                                                            <th>Title</th>
+                                                                            <th>Air Date</th>
+                                                                        </tr>
+                                                                    </thead>
+    
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <th>1</th>
+                                                                            <td>Pilot</td>
+                                                                            <td>Tuesday, November 16th, 2004</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>2</th>
+                                                                            <td>Paternity</td>
+                                                                            <td>Tuesday, November 23rd, 2004</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>3</th>
+                                                                            <td>Occam's Razor</td>
+                                                                            <td>Tuesday, November 30th, 2004</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>4</th>
+                                                                            <td>Maternity</td>
+                                                                            <td>Tuesday, December 7th, 2004</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>5</th>
+                                                                            <td>Damned If You Do</td>
+                                                                            <td>Tuesday, December 14th, 2004</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <th>6</th>
+                                                                            <td>The Socratic Method</td>
+                                                                            <td>Tuesday, December 21st, 2004</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <% }) %>
+                                            </div>
+                                        </div>
+                                        <!-- end accordion -->
+
+                                        <!-- trailer -->
+                                        <% if (data.videos.results[0].key) { %>
+                                            <div class="col-12 col-xl-5 trailer-wrapper">
+                                                <iframe width="560" height="315" src="https://www.youtube.com/embed/<%- data.videos.results[0].key %> " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                            </div>
+                                            <% } %>
+                                                <!-- end trailer -->
+
+                                                <!-- recommendations -->
+                                                <div class="col-12">
+                                                    <!-- section title -->
+                                                    <div class="col-12">
+                                                        <h2 class="section__title">Recommended</h2>
+                                                    </div>
+                                                    <!-- end section title -->
+                                                    <div class="row owl-carousel" id="owl-carousel">
+                                                        <% for(var i=0; i<recommendations.length; i++) { %>
+                                                            <%var url %>
+                                                                <% url = '/tv/'+ recommendations[i].id %>
+                                                                    <!-- card -->
+                                                                    <div class="col-12 item">
+                                                                        <div class="card">
+                                                                            <div class="card__cover recommendations">
+                                                                                <% if (recommendations[i].poster_path) { %>
+                                                                                    <a href="" data-href="https://image.tmdb.org/t/p/w154<%- recommendations[i].poster_path %>" class="boxout1 progressive replace" aria-label="poster">
+                                                                                        <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" class="preview" alt="party" />
+                                                                                    </a>
+                                                                                    <% } else { %>
+                                                                                        <a href="" data-href="/img/covers/posterplaceholder.jpg" class="boxout1 progressive replace" aria-label="poster">
+                                                                                            <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" class="preview" alt="party" />
+                                                                                        </a>
+                                                                                        <% } %>
+                                                                                            <a href="/tv/<%- recommendations[i].id %>" class="card__play" aria-label="icon-play">
+                                                                                                <i class="icon ion-ios-play"></i>
+                                                                                            </a>
+                                                                            </div>
+                                                                            <div class="card__content">
+                                                                                <a href="/tv/<%- recommendations[i].id %>" aria-label="title">
+                                                                                    <h3 class="card__title">
+
+                                                                                        <%- recommendations[i].name %>
+
+                                                                                    </h3>
+                                                                                </a>
+                                                                                <span class="card__category">
+                                                                            <a href="#" aria-label="genres"><%- recommendations[i].genre_ids.toString().split(',').join(', ') %></a>
+                                                                        </span>
+                                                                                <div class="card__wrap">
+                                                                                    <span class="card__rate">
+                                                <i class="icon ion-ios-star"></i><%- recommendations[i].vote_average %> </span>
+
+                                                                                    <ul class="card__list">
+                                                                                        <li class="grid-share-btn" data-title="<%- recommendations[i].name || recommendations[i].title || '' %> " data-url="/movie/<%- recommendations[i].id %>">
+                                                                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 300 300" xml:space="preserve">
+                                                                                            <g id="XMLID_3_">
+                                                                                                <path id="XMLID_239_" d="M105.875,150c0,1.025-0.231,1.985-0.293,3.011l107.486,53.744c9.213-7.797,20.98-12.663,33.984-12.663
+                                                                                                    c29.244,0,52.947,23.698,52.947,52.946C300,276.302,276.297,300,247.053,300c-29.264,0-52.929-23.698-52.929-52.962
+                                                                                                    c0-1.059,0.228-2.002,0.293-3.032L86.928,190.283c-9.24,7.764-20.978,12.63-33.982,12.63C23.699,202.913,0,179.231,0,150
+                                                                                                    c0-29.262,23.699-52.962,52.945-52.962c13.005,0,24.754,4.883,33.982,12.646l107.489-53.726c-0.065-1.025-0.293-1.987-0.293-3.046
+                                                                                                    C194.124,23.7,217.789,0,247.053,0C276.297,0,300,23.7,300,52.913c0,29.267-23.703,52.963-52.947,52.963
+                                                                                                    c-13.037,0-24.787-4.886-33.984-12.68l-107.486,53.763C105.644,147.984,105.875,148.942,105.875,150L105.875,150z M105.875,150" fill="#ff55a5" />
+                                                                                            </g>
+                                                                                            
+                                                                                            </svg>
+                                                                                        </li>
+
+                                                                                    </ul>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- end card -->
+                                                                    <% } %>
+                                                    </div>
+                                                </div>
+                                                <!-- end recommendations -->
+                                                <!-- cast -->
+                                                <% if (cast.length > 1) { %>
+                                                    <div class="col-12 col-xl-8">
+                                                        <div class="col-12">
+                                                            <h2 class="section__title cast-title fs-19">Series Cast</h2>
+                                                        </div>
+                                                        <!-- end section title -->
+                                                        <div class="row owl-carousel" id="owl-carousel-cast">
+                                                            <% for(var i=0; i<cast.length; i++) { %>
+                                                                <div class="col-12 item">
+                                                                    <div class="card">
+                                                                        <div class="card__cover cast">
+                                                                            <% if (cast[i].profile_path) { %>
+                                                                                <a href="" data-href="https://image.tmdb.org/t/p/w185<%- cast[i].profile_path %>" class="boxout1 progressive replace" aria-label="poster">
+                                                                                    <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" class="preview" alt="party" />
+                                                                                </a>
+                                                                                <% } else { %>
+                                                                                    <a href="" data-href="/img/covers/posterplaceholder.jpg" class="boxout1 progressive replace" aria-label="poster">
+                                                                                        <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" height="202" class="preview" alt="party" />
+                                                                                    </a>
+                                                                                    <% } %>
+                                                                        </div>
+                                                                        <div class="card__content">
+                                                                            <h3 class="card__title">
+                                                                                <a href="javascript:void(0);" aria-label="name">
+                                                                                    <%- cast[i].name %>
+                                                                                </a>
+                                                                            </h3>
+                                                                            <span class="card__category">
+                                                                        <a href="javascript:void(0);" aria-label="character"><%- cast[i].character %></a>
+                                                                    </span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <!-- end card -->
+                                                                <% } %>
+                                                        </div>
+                                                    </div>
+                                                    <% } %>
+                                                        <!-- end cast -->
+
+                                                        <!-- info -->
+                                                        <div class="col-12 col-xl-4">
+                                                            <div class="col-12">
+                                                                <h2 class="section__title facts-title">
+                                                                    Facts
+                                                                </h2>
+                                                            </div>
+                                                            <div class="feature p-l-20">
+                                                                <h3 class="feature__title">Networks:</h3>
+                                                                <% data.networks.forEach(element => { %>
+                                                                    <img src="https://image.tmdb.org/t/p/h30/<%- element.logo_path %> " alt="">
+                                                                    <% }) %>
+                                                            </div>
+
+                                                            <div class="feature p-l-20">
+                                                                <h3 class="feature__title">Type:</h3>
+                                                                <p class="feature__text">
+                                                                    <%- data.type %>
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="feature p-l-20">
+                                                                <h3 class="feature__title">Status:</h3>
+                                                                <p class="feature__text">
+                                                                    <%- data.status %>
+                                                                </p>
+                                                            </div>
+
+                                                        </div>
+                                                        <!-- end info -->
+                                    </div>
+                                </div>
+                                <!-- end details content -->
+</section>
+<!-- end details -->

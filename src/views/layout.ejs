@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#18181b">
+    <meta name="google-site-verification" content="zvVYW5a7gFc4U_hFcXpur9SP6W2KIVVcb6Mfl7a66Sk" />
+    <% let title = 'Movie Palace – Online Movies, TV Shows & Cinema' %>
+        <% let description = 'Find out the most recent, pouplar movies and TV shows in one place, ratings, release dates, durations, casts.' %>
+
+            <% let siteUrl = 'https://moviepalace.herokuapp.com' %>
+                <% let imageUrl = 'https://moviepalace.herokuapp.com/img/preview.png' %>
+                    <% let height = width = '400' %>
+
+                        <% if (data.current_url) { %>
+                            <% siteUrl = data.current_url %>
+                                <% } %>
+
+                                    <% if (data.poster_path) { %>
+                                        <% imageUrl = "https://image.tmdb.org/t/p/w400"+data.poster_path %>
+                                            <% height = "600" %>
+                                                <% width = "400" %>
+                                                    <% } %>
+
+
+                                                        <% if (data.overview) { %>
+                                                            <% description = data.overview %>
+                                                                <% } %>
+                                                                    <% if (data.title) { %>
+                                                                        <% title = data.title+" - Movie Palace" %>
+                                                                            <% } %>
+                                                                                <%  if(data.name) { %>
+                                                                                    <% title = data.name+" - Movie Palace" %>
+                                                                                        <% } %>
+
+                                                                                            <!-- Primary Meta Tags -->
+                                                                                            <title>
+                                                                                                <%- title %>
+                                                                                            </title>
+                                                                                            <meta name="title" content="<%- title %> ">
+                                                                                            <meta name="description" content="<%- description %>">
+                                                                                            <% let keywords = '' %>
+                                                                                                <% if (data.keywords) { %>
+                                                                                                    <% keywords = data.keywords %>
+                                                                                                        <% } %>
+                                                                                                            <meta name="keywords" content="Palace, Movies, TV Shows, Ratings, Synopsis, Trailers, Credits, Cast, <%- keywords %>">
+                                                                                                            <!-- Open Graph / Facebook -->
+                                                                                                            <meta property="og:type" content="website">
+                                                                                                            <meta property="og:url" content="<%- siteUrl %>">
+                                                                                                            <meta property="og:title" content="<%- title %>">
+                                                                                                            <meta property="og:description" content="<%- description %>">
+                                                                                                            <meta property="og:image" content="<%- imageUrl %> ">
+                                                                                                            <meta property="og:image:width" content="<%- width %>" />
+                                                                                                            <meta property="og:image:height" content="<%- height %>" />
+
+                                                                                                            <!-- Twitter -->
+                                                                                                            <meta property="twitter:card" content="summary_large_image">
+                                                                                                            <meta property="twitter:url" content="<%- siteUrl %>">
+                                                                                                            <meta property="twitter:creator" content="@jam-es-muriithi">
+                                                                                                            <meta property="twitter:title" content="<%- title %>">
+                                                                                                            <meta property="twitter:description" content="<%- description %>">
+                                                                                                            <meta property="twitter:image" content="<%- imageUrl %>">
+                                                                                                            <meta name="twitter:image:width" content="<%- width %>">
+                                                                                                            <meta name="twitter:image:height" content="<%- height %>">
+
+                                                                                                            <link rel="preconnect" href="//fonts.googleapis.com" crossorigin="" />
+                                                                                                            <link rel="preconnect" href="//cdn.jsdelivr.net" crossorigin="" />
+                                                                                                            <link rel="preconnect" href="//moviepalace.herokuapp.com" crossorigin="" />
+                                                                                                            <link rel="preconnect" href="//image.tmdb.org" crossorigin="" />
+
+                                                                                                            <!-- favicon -->
+                                                                                                            <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
+                                                                                                            <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
+                                                                                                            <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
+                                                                                                            <link rel="manifest" href="./site.webmanifest">
+                                                                                                            <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg" color="#5bbad5">
+                                                                                                            <meta name="msapplication-TileColor" content="#603cba">
+
+                                                                                                            <!-- CSS -->
+
+                                                                                                            <link rel="stylesheet" href="css/bootstrap-reboot.min.css" defer>
+
+
+                                                                                                            <link rel="stylesheet" href="css/bootstrap-grid.min.css" defer>
+
+
+                                                                                                            <link rel="preload" href="css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+                                                                                                            <noscript>
+<link rel="stylesheet" href="css/ionicons.min.css" defer>
+</noscript>
+
+                                                                                                            <link rel="preload" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+                                                                                                            <noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/progressive-image.js/dist/progressive-image.css" defer>
+</noscript>
+
+                                                                                                            <!-- Font -->
+                                                                                                            <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" as="style" onload="this.onload=null;this.rel='stylesheet'">
+                                                                                                            <noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" defer>
+</noscript>
+
+                                                                                                            <% if (typeof owl != 'undefined') { %>
+                                                                                                                <link rel="preload" href="/css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+                                                                                                                <noscript>
+<link rel="stylesheet" href="/css/owl.carousel.min.css" defer>
+</noscript>
+                                                                                                                <% } %>
+
+
+                                                                                                                    <link rel="stylesheet" href="css/main.css" defer>
+
+
+</head>
+
+<body class="body">
+    <!-- header -->
+    <%- include('partials/header') %>
+        <%- body %>
+            <%- include('partials/footer') %>
+                <%- include('partials/scripts') %>
+                    <script>
+                        ! function(e, a, t, r, n, o, i) {
+                            e.GoogleAnalyticsObject = n, e.ga = e.ga || function() {
+                                (e.ga.q = e.ga.q || []).push(arguments)
+                            }, e.ga.l = 1 * new Date, o = a.createElement(t), i = a.getElementsByTagName(t)[0], o.async = 1, o.src = "https://www.google-analytics.com/analytics.js", i.parentNode.insertBefore(o, i)
+                        }(window, document, "script", 0, "ga"), ga("create", "UA-XXXXX-Y", "auto"), ga("send", "pageview"), "serviceWorker" in navigator && window.addEventListener("load", () => {
+                            navigator.serviceWorker.register("service-worker.js").then(() => {
+                                console.log("Service Worker Registered,")
+                            })
+                        });
+                    </script>
+</body>
+
+</html>
