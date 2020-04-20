@@ -59,11 +59,7 @@
                                                             </div>
                                                             <ul class="card__meta">
                                                                 <li class="genre"><span>Genre:</span>
-                                                                    <% let length = 3 %>
-                                                                        <% if (data.genres.split(',').length < length) { %>
-                                                                            <% length = data.genres.split(',').length %>
-                                                                                <% } %>
-                                                                                    <%- data.genres.toString().split(',').slice(1, length).join(', ') %>
+                                                                    <%- data.genres.toString().split(',').join(', ') %>
                                                                 </li>
                                                                 <li><span>Release date:</span>
                                                                     <%- data.release_date %>
@@ -71,9 +67,13 @@
                                                                 <li><span>Running time:</span>
                                                                     <%- data.runtime %> <span> min</span></li>
                                                                 <li><span>Country:</span>
-                                                                    <a href="#" class="genre" aria-label="countries">
-                                                                        <%- data.production_countries.toString().split(',').join(', ') %>
-                                                                    </a>
+                                                                    <% let length = 3 %>
+                                                                        <% if (data.production_countries.toString().length < length) { %>
+                                                                            <% length = data.production_countries.toString().length %>
+                                                                                <% } %>
+                                                                                    <a href="#" class="genre" aria-label="countries">
+                                                                                        <%- data.production_countries.toString().split(',').slice(1, length).join(', ') %>
+                                                                                    </a>
                                                                 </li>
                                                             </ul>
                                                             <div class="card__description card__description--details">
