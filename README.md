@@ -1,6 +1,5 @@
+[![dependencies Status](https://david-dm.org/james-muriithi/movie-palace/status.svg)](https://david-dm.org/james-muriithi/movie-palace) [![Heroku](https://heroku-badge.herokuapp.com/?app=movie-palace)](https://moviepalace.herokuapp.com/)
 # Movie Palace
-[![Heroku](https://heroku-badge.herokuapp.com/?app=movie-palace)](https://moviepalace.herokuapp.com/)
-
 [Demo](https://moviepalace.herokuapp.com/)
 ![](screenshot.png)
 
