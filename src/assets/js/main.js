@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         const isFavorited = (data) => {
-            let stroredFavourites = JSON.parse(localStorage.getItem('favourites'))
+            let stroredFavourites = localStorage.getItem('favourites')
             if (stroredFavourites) {
                 stroredFavourites = JSON.parse(stroredFavourites)
                 return stroredFavourites.find(item => item.id === data.id)
