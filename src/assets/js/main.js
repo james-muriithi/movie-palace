@@ -26,9 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
             return false;
         }
 
-        let d = $('svg#heart-svg').parent().parent().data('json');
-        if (isFavorited(d)) {
-            $('svg#heart-svg').parent().parent().find('input').prop('checked', true)
+        if ($('svg#heart-svg').length == 1) {
+            let d = $('svg#heart-svg').parent().parent().data('json');
+            if (isFavorited(d)) {
+                $('svg#heart-svg').parent().parent().find('input').prop('checked', true)
+            }
         }
 
         const addFavorite = (data) => {
