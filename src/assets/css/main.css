@@ -1646,14 +1646,14 @@ li.fav label {
     margin-bottom: 4px!important;
 }
 
-svg {
+li.fav svg {
     cursor: pointer;
     overflow: visible;
-    width: 40px;
+    width: 45px;
     margin: 0px;
 }
 
-svg #heart {
+li.fav svg #heart {
     transform-origin: center;
     animation: animateHeartOut .3s linear forwards;
 }

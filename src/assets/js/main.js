@@ -17,6 +17,57 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+        const isFavorited = (data) => {
+            let stroredFavourites = JSON.parse(localStorage.getItem('favourites'))
+            return stroredFavourites.find(item => item.id === data.id)
+        }
+
+        let d = $('svg#heart-svg').parent().parent().data('json');
+        if (isFavorited(d)) {
+            $('svg#heart-svg').parent().parent().find('input').prop('checked', true)
+        }
+
+        const addFavorite = (data) => {
+            let stroredFavourites = JSON.parse(localStorage.getItem('favourites'))
+            if (stroredFavourites) {
+                if (isFavorited(data)) {
+                    removeFavourite(data)
+                    return 'already a favourite';
+                } else {
+                    localStorage.setItem('favourites', JSON.stringify([...stroredFavourites, data]));
+                    return
+                }
+            } else {
+                localStorage.setItem('favourites', JSON.stringify([data]));
+                return
+            }
+        }
+
+        const removeFavourite = (data) => {
+            const storedFavorites = JSON.parse(localStorage.getItem("favourites"));
+
+            const filteredFavorites = storedFavorites.filter(
+                (i) => i.id !== data.id
+            );
+
+            localStorage.setItem("favourites", JSON.stringify(filteredFavorites));
+
+            // $('svg#heart-svg').parent().parent().find('input').prop('checked', false)
+
+        }
+
+
+        // favourite btn
+        $('svg#heart-svg').on('click', function() {
+            try {
+                const data = $(this).parent().parent().data('json')
+                addFavorite(data);
+
+            } catch (error) {
+                console.log(error);
+            }
+        })
+
         /*==============================
         Search
         ==============================*/
