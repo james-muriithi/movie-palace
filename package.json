@@ -24,6 +24,7 @@
         "gulp": "^4.0.2"
     },
     "devDependencies": {
+        "dotenv": "^8.2.0",
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.2.0",
         "gulp-connect": "^5.7.0",
