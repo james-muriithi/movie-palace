@@ -19,7 +19,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const isFavorited = (data) => {
             let stroredFavourites = JSON.parse(localStorage.getItem('favourites'))
-            return stroredFavourites.find(item => item.id === data.id)
+            if (stroredFavourites) {
+                stroredFavourites = JSON.parse(stroredFavourites)
+                return stroredFavourites.find(item => item.id === data.id)
+            }
+            return false;
         }
 
         let d = $('svg#heart-svg').parent().parent().data('json');
@@ -28,8 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const addFavorite = (data) => {
-            let stroredFavourites = JSON.parse(localStorage.getItem('favourites'))
+            let stroredFavourites = localStorage.getItem('favourites')
             if (stroredFavourites) {
+                stroredFavourites = JSON.parse(stroredFavourites)
                 if (isFavorited(data)) {
                     removeFavourite(data)
                     return 'already a favourite';
