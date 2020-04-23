@@ -262,10 +262,7 @@
     <!-- end page offline page -->
     <!-- snackbar -->
     <div id="snackbar">
-        You're back online 🥂
-        <a href="javascrip:void(0)" onclick="location.reload();" class="fr text-white">
-      refresh
-    </a>
+        You're back online 🥂. Reloading...
     </div>
 </body>
 
@@ -282,7 +279,7 @@
         setTimeout(function() {
             x.className = x.className.replace("show", "");
             location.reload();
-        }, 5000);
+        }, 3000);
     }
 
 
