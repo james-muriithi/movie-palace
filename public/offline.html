@@ -6,27 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#18181b">
 
-    <!-- Font -->
-    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" defer>
-    </noscript>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/default-skin.css">
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./icon/favicon-16x16.png">
-    <link rel="manifest" href="./site.webmanifest">
-    <link rel="mask-icon" href="./img/icon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#603cba">
-
     <title>Movie Palace – Online Movies, TV Shows & Cinema HTML Template</title>
+
+    <style>
+        html,
+        body {
+            font-family: Ubuntu, sans-serif;
+            background-color: #2b2b31;
+            margin: 0px;
+            height: 100%;
+            width: 100%;
+            overflow: hidden!important;
+        }
+        
+        .page-404 {
+            display: block;
+            position: relative;
+        }
+        
+        .page-404__wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .page-404__content {
+            background-color: #2b2b31;
+            -webkit-box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+            box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+        }
+        
+        .page-404__content:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            display: block;
+            background-image: -moz-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            background-image: -webkit-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            background-image: -ms-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            -webkit-box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+            box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+        }
+        
+        .page-404__title {
+            position: relative;
+            background-image: -webkit-linear-gradient(0deg, #ff55a5 0%, #ff5860 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #ff5860;
+            line-height: 100%;
+            font-size: 80px;
+            margin-bottom: 15px;
+            text-shadow: 0 12px 64px rgba(255, 88, 96, 0.35);
+        }
+        
+        .page-404__text {
+            text-align: center;
+            display: block;
+            width: 100%;
+            padding: 0 20px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 15px;
+            line-height: 25px;
+            font-family: 'Open Sans', sans-serif;
+            margin-bottom: 20px;
+        }
+        
+        .page-404__btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50px;
+            width: 160px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            background-image: -moz-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            background-image: -webkit-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            background-image: -ms-linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            background-image: linear-gradient(90deg, #ff55a5 0%, #ff5860 100%);
+            -webkit-box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+            box-shadow: 0 0 20px 0 rgba(255, 88, 96, 0.5);
+            opacity: 0.85;
+            font-size: 13px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin: 20px auto 0;
+        }
+        
+        .page-404__btn:hover {
+            opacity: 1;
+            color: #fff;
+        }
+        
+        @media (min-width: 768px) {
+            .page-404__content {
+                padding: 50px 0;
+            }
+            .page-404__title {
+                font-size: 100px;
+            }
+        }
+        
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+        /* .col-12 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            padding-right: 15px;
+            padding-left: 15px;
+        } */
+    </style>
 
 </head>
 
@@ -79,3 +189,11 @@
 </body>
 
 </html>
+<script>
+    window.addEventListener('load', () => {
+        // now we listen for network status changes
+        window.addEventListener('online', () => {
+            location.reload();
+        });
+    });
+</script>
