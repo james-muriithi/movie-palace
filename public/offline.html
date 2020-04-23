@@ -146,6 +146,14 @@
             bottom: 5px;
         }
         
+        @media screen and (max-width: 576px) {
+            #snackbar {
+                width: 100%;
+                left: 5px;
+                margin-left: 0px;
+            }
+        }
+        
         .fr {
             float: right;
         }
@@ -198,6 +206,10 @@
                 bottom: 0;
                 opacity: 0;
             }
+        }
+        
+        .text-white {
+            color: rgba(255, 255, 255, 0.7);
         }
     </style>
 
@@ -252,7 +264,7 @@
     <!-- snackbar -->
     <div id="snackbar">
         You're back online 🥂
-        <a href="javascrip:void(0)" onclick="location.reload();" class="fr">
+        <a href="javascrip:void(0)" onclick="location.reload();" class="fr text-white">
       refresh
     </a>
     </div>
@@ -271,7 +283,7 @@
         setTimeout(function() {
             x.className = x.className.replace("show", "");
             location.reload();
-        }, 3000);
+        }, 5000);
     }
 
 
