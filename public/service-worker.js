@@ -1,4 +1,4 @@
-const CACHE_NAME = 'cache-v2';
+const CACHE_NAME = 'cache';
 self.addEventListener("fetch", function(e) {
     e.respondWith(caches.open(CACHE_NAME).then(function(s) {
         return s.match(e.request).then(function(t) {
@@ -8,13 +8,7 @@ self.addEventListener("fetch", function(e) {
             }, function(e) {
                 console.log("Error in fetch()", e), e.waitUntil(caches.open(CACHE_NAME).then(function(e) {
                     return e.addAll([
-                        "/",
-                        "/offline.html",
-                        "/movies/offline.html",
-                        "/movie/offline.html",
-                        "/tv/offline.html",
-                        "/tv-shows/offline.html",
-                        "search/offline.html"
+                        "/"
                     ])
                 }))
             });
@@ -28,7 +22,7 @@ self.addEventListener("fetch", function(e) {
         })
     }))
 }), self.addEventListener("install", function(e) {
-    e.waitUntil((async() => {
+    self.skipWaiting(), e.waitUntil((async() => {
         const cache = await caches.open(CACHE_NAME);
         // Setting {cache: 'reload'} in the new request will ensure that the response
         // isn't fulfilled from the HTTP cache; i.e., it will be from the network.
@@ -38,7 +32,7 @@ self.addEventListener("fetch", function(e) {
             "/movie/offline.html",
             "/tv/offline.html",
             "/tv-shows/offline.html",
-            "search/offline.html"
+            "/search/offline.html"
         ]);
-    })()), self.skipWaiting(), console.log("Latest version installed!")
+    })()), console.log("Latest version installed!")
 });
