@@ -129,13 +129,76 @@
             padding-right: 15px;
             padding-left: 15px;
         }
-        /* .col-12 {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            padding-right: 15px;
-            padding-left: 15px;
-        } */
+        /* snack bar */
+        
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 5px;
+        }
+        
+        .fr {
+            float: right;
+        }
+        
+        .show {
+            visibility: visible !important;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 5px;
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 5px;
+                opacity: 1;
+            }
+        }
+        
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 5px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+        
+        @keyframes fadeout {
+            from {
+                bottom: 5px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
     </style>
 
 </head>
@@ -186,14 +249,36 @@
         </div>
     </div>
     <!-- end page offline page -->
+    <!-- snackbar -->
+    <div id="snackbar">
+        You're back online 🥂
+        <a href="javascrip:void(0)" onclick="location.reload();" class="fr">
+      refresh
+    </a>
+    </div>
 </body>
 
 </html>
 <script>
+    function showSnack() {
+        // Get the snackbar DIV
+        var x = document.getElementById("snackbar")
+
+        // Add the "show" class to DIV
+        x.className = "show";
+
+        // After 3 seconds, remove the show class from DIV
+        setTimeout(function() {
+            x.className = x.className.replace("show", "");
+            location.reload();
+        }, 3000);
+    }
+
+
     window.addEventListener('load', () => {
         // now we listen for network status changes
         window.addEventListener('online', () => {
-            location.reload();
+            showSnack()
         });
     });
 </script>
