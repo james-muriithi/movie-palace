@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if ($('div.details__bg').data('bg')) {
             let bg = $('div.details__bg').data('bg')
             $('div.details__bg').css({
-                background: `linear-gradient(90deg, rgba(0,0,0,.7) 0%, rgba(0,0,0,.7) 35%, rgba(0,212,255,0) 100%),\
+                background: `linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,.8) 35%, rgba(0,212,255,0) 100%),\
                 url(${bg}) no-repeat center/cover`,
                 height: '550px',
             });
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             loop: false,
-            autoplay: true,
+            autoplay: false,
             nav: true,
             dots: false,
             smartSpeed: 600,
