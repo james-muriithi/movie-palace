@@ -120,12 +120,13 @@
         <%- body %>
             <%- include('partials/footer') %>
                 <%- include('partials/scripts') %>
+                    <!-- Global site tag (gtag.js) - Google Analytics -->
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140416510-2"></script>
                     <script>
-                        ! function(e, a, t, r, n, o, i) {
-                            e.GoogleAnalyticsObject = n, e.ga = e.ga || function() {
-                                (e.ga.q = e.ga.q || []).push(arguments)
-                            }, e.ga.l = 1 * new Date, o = a.createElement(t), i = a.getElementsByTagName(t)[0], o.async = 1, o.src = "https://www.google-analytics.com/analytics.js", i.parentNode.insertBefore(o, i)
-                        }(window, document, "script", 0, "ga"), ga("create", "UA-XXXXX-Y", "auto"), ga("send", "pageview"), "serviceWorker" in navigator && window.addEventListener("load", () => {
+                        function gtag() {
+                            dataLayer.push(arguments)
+                        }
+                        window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "UA-140416510-2"), "serviceWorker" in navigator && window.addEventListener("load", () => {
                             navigator.serviceWorker.register("service-worker.js").then(() => {
                                 console.log("Service Worker Registered,")
                             })
