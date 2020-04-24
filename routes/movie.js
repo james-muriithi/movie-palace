@@ -12,7 +12,7 @@ router.get('/:id', async(req, res, next) => {
     const current_url = req.protocol + '://' + req.get('host') + req.originalUrl;
     const data = await movieData(id)
     const recommendations = await movieRecommendations(id)
-    res.render('single-movie', { data, owl: true, recommendations, current_url });
+    res.render('single-movie', { data, owl: true, recommendations, current_url, cast: data.credits.cast });
 });
 
 router.use('/*', function(req, res, next) {
