@@ -91,6 +91,58 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
+
+        let option = {
+            url: function(phrase) { //url of the remote php db file
+                return '/suggestions/' + phrase;
+            },
+            requestDelay: 500,
+
+            getValue: function(element) { //fetch the value of name key from the returned json
+                if (element) {
+                    if (element.media_type == 'tv') {
+                        return element.name;
+                    } else {
+                        return element.title;
+                    }
+                }
+                return;
+                // try {
+                //     return element.title;
+                // } catch (error) {
+                //     return element.name;
+                // }
+
+            },
+
+            template: {
+                type: "custom",
+                method: function(value, item) {
+                    if (item.poster_path) {
+                        return `<img src='https://image.tmdb.org/t/p/w45/${item.poster_path}' class="img-thumbnail" /> ${value} - ${item.overview.substr(0,50)}...`;
+                    }
+                    return `${value} - ${item.overview.substr(0,50)}...`
+                }
+            },
+
+            list: {
+                maxNumberOfElements: 5,
+                match: {
+                    enabled: true
+                },
+                onChooseEvent: function() {
+                    $('input[name="query"]').submit();
+                }
+            },
+
+            theme: "dark"
+        };
+
+        $('input[name="query"]').easyAutocomplete(option);
+
+
+
+
         /*==============================
         Home
         ==============================*/

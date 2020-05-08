@@ -12,6 +12,7 @@ const singleMovieRoute = require('./routes/movie');
 const singleTvShowRoute = require('./routes/tv');
 const moviesRoute = require('./routes/movies');
 const tvShowsRoute = require('./routes/tv-shows');
+const suggestionsRoute = require('./routes/suggestions');
 
 
 let https_redirect = function(req, res, next) {
@@ -40,6 +41,8 @@ app.use('/movie', express.static(__dirname + '/public'), singleMovieRoute);
 app.use('/movies', express.static(__dirname + '/public'), moviesRoute);
 app.use('/tv', express.static(__dirname + '/public'), singleTvShowRoute);
 app.use('/tv-shows', express.static(__dirname + '/public'), tvShowsRoute);
+app.use('/suggestions', suggestionsRoute);
+
 app.use('/', indexRoute);
 
 
