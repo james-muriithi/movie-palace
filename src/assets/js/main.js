@@ -242,8 +242,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             $('.share-btn,.grid-share-btn').on('click', function() {
                 const host = `${window.location.protocol}//${window.location.hostname}`;
-                let url = `Url: ${host}${$(this).data('url')}`
-                let title = `Title: ${$(this).data('title')}`
+                let url = `${host}${$(this).data('url')}`
+                let title = `${$(this).data('title')}`
                 let rating = `Rating ⭐: ${$(this).data('rating')}`
                 let text = `${title}\n\n${rating}\n\nStory Line: ${$(this).data('overview')}\n\n${url}`
 
