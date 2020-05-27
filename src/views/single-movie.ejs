@@ -92,7 +92,7 @@
                                                                                 </label>
                                                                             </li>
                                                                             <!-- share btn -->
-                                                                            <li class="share-btn" data-title="<%-data.title || '' %> " data-url="/movie/<%- data.id %>">
+                                                                            <li class="share-btn" data-title="<%-data.title || '' %> " data-url="/movie/<%- data.id %>" data-rating="<%- data.vote_average %>" data-overview="<%- data.overview %>">
                                                                                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px" viewBox="0 0 300 300" xml:space="preserve">
                                                                             <g id="XMLID_3_">
                                                                                 <path id="XMLID_239_" d="M105.875,150c0,1.025-0.231,1.985-0.293,3.011l107.486,53.744c9.213-7.797,20.98-12.663,33.984-12.663
@@ -178,7 +178,7 @@
                                                         <i class="icon ion-ios-star"></i><%- recommendations[i].vote_average %> </span>
 
                                                                                     <ul class="card__list">
-                                                                                        <li class="grid-share-btn" data-title="<%- recommendations[i].name || recommendations[i].title || '' %> " data-url="/movie/<%- recommendations[i].id %>">
+                                                                                        <li class="grid-share-btn" data-title="<%- recommendations[i].name || recommendations[i].title || '' %> " data-url="/movie/<%- recommendations[i].id %>" data-rating="<%- recommendations[i].vote_average %>" data-overview="<%- recommendations[i].overview %>">
                                                                                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 300 300" xml:space="preserve">
                                                                                                     <g id="XMLID_3_">
                                                                                                         <path id="XMLID_239_" d="M105.875,150c0,1.025-0.231,1.985-0.293,3.011l107.486,53.744c9.213-7.797,20.98-12.663,33.984-12.663

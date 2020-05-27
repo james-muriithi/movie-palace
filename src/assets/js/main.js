@@ -243,10 +243,13 @@ document.addEventListener('DOMContentLoaded', function() {
             $('.share-btn,.grid-share-btn').on('click', function() {
                 const host = `${window.location.protocol}//${window.location.hostname}`;
                 let url = host + $(this).data('url')
-                let title = $(this).data('title')
+                let title = `Title: ${$(this).data('title')}`
+                let rating = `Rating ⭐: ${$(this).data('rating')}`
+                let text = `\n${rating}\n\nStory Line: ${$(this).data('overview')}`
 
                 navigator.share({
                         title,
+                        text,
                         url
                     }).then(() => {
                         console.log('Thanks! 😄');
