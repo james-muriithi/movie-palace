@@ -4772,6 +4772,9 @@ body {
 .embed-responsive-21by9::before {
     padding-top: 42.85714%
 }
+.embed-responsive-19by9::before {
+    padding-top: 45.92%
+}
 .embed-responsive-16by9::before {
     padding-top: 56.25%
 }
