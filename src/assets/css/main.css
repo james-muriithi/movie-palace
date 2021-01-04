@@ -4757,7 +4757,7 @@ body {
     overflow: hidden
 }
 #stream_frame{
-    width: 100%;
+    width: 100%!important;
 }
 .embed-responsive::before {
     display: block;
@@ -4776,7 +4776,7 @@ body {
     padding-top: 42.85714%
 }
 .embed-responsive-19by9::before {
-    padding-top: 100%
+    padding-top: 45.9%
 }
 .embed-responsive-16by9::before {
     padding-top: 56.25%
@@ -4788,8 +4788,8 @@ body {
     padding-top: 100%
 }
 
-@media only screen and (min-width: 576px) {
+@media only screen and (max-width: 576px) {
     .embed-responsive-19by9::before {
-        padding-top: 75%!important;
+        padding-top: 84%!important;
     }
 }
