@@ -329,7 +329,7 @@
         request.onreadystatechange = function () {
             if (request.status === 200){
                 stream_link=request.response;
-                document.getElementById('stream_frame').setAttribute('src', stream_link);
+                // document.getElementById('stream_frame').setAttribute('src', stream_link);
             }
             console.log(request);
         }
