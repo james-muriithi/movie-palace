@@ -19,6 +19,10 @@
    ```bash
    export API_KEY=your_api_key
     ```
+    or
+    ```bash
+   cp .env.example .env
+    ```
 4. Build
     ```bash
     npm run build

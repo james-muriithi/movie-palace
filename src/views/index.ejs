@@ -11,7 +11,9 @@
                             <% continue %>
                                 <% } %>
                                     <%var url %>
-                                        <% url = '/movie/'+ data[i].id %>
+                                    <%var title %>
+                                        <% title = data[i].media_type == 'tv' ? data[i].name : data[i].title %> 
+                                        <% url = '/movie/'+ data[i].id + '&title=' + title %>
                                             <% if (data[i].media_type == 'tv') { %>
                                                 <% url='/tv/' + data[i].id %>
                                                     <% } %>
@@ -40,13 +42,7 @@
                                                                         <div class="card__content">
                                                                             <a href="<%- url %>">
                                                                                 <h3 class="card__title">
-
-                                                                                    <% if (data[i].media_type == 'tv') { %>
-                                                                                        <%= data[i].name %>
-                                                                                            <% } else{ %>
-                                                                                                <%= data[i].title %>
-                                                                                                    <% } %>
-
+                                                                                    <%= title %> 
                                                                                 </h3>
                                                                             </a>
                                                                             <span class="card__category">
