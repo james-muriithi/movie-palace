@@ -3,19 +3,28 @@ const qs = require('qs');
 const { STREAM_URL, STREAM_API_KEY } = require('./urls')
 
     const iframeSrc = (id, season = '', episode = '') => {
-        api='d3670532ab1cd85d042cbe4f922f726b';
-        url = 'https://www.vidstreamapi.com/stream_src.php';
-        request = new XMLHttpRequest();
-        request.open("POST", url);
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send("api="+STREAM_API_KEY+"&id="+id+"&season="+season+"&episode="+episode);
-        request.onreadystatechange = function () {
-            if (request.status === 200){
-                return request.response;
-            }
-            console.log(request);
-            return null;
+        const params = {
+            api: STREAM_API_KEY,
+            id,
+            season,
+            episode
         }
+
+        return axios.post(STREAM_URL, qs.stringify(params), {
+            headers: {
+                'Content-Type': "application/x-www-form-urlencoded",
+                'Access-Control-Allow-Origin': '*',        
+                'Accept': 'application/json',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        }).then(data => {
+            console.log(data);
+            return data.data;
+        })
+            .catch((error) => {
+                console.log(error);
+                return null;
+            });
     }
 
 module.exports = iframeSrc
