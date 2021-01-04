@@ -4784,3 +4784,9 @@ body {
 .embed-responsive-1by1::before {
     padding-top: 100%
 }
+
+@media (min-width: 576px) {
+    .embed-responsive-19by9::before {
+        padding-top: 75%!important;
+    }
+}
