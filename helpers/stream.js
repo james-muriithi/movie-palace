@@ -14,7 +14,10 @@ const iframeSrc = (id, season = '', episode = '') => {
         headers: {
             'Content-Type': "application/x-www-form-urlencoded"
         }
-    }).then(data => data.data)
+    }).then(data => {
+        console.log(data);
+        return data.data;
+    })
         .catch((error) => {
             console.log(error);
             return null;
