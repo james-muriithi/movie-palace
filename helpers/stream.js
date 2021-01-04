@@ -13,6 +13,7 @@ const { STREAM_URL, STREAM_API_KEY } = require('./urls')
             if (request.status === 200){
                 return request.response;
             }
+            console.log(request);
             return null;
         }
     }
