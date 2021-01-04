@@ -5,6 +5,7 @@ const homeData = require('../helpers/trending');
 const urls = require('../helpers/urls');
 const movieData = require('../helpers/get-movie');
 const movieRecommendations = require('../helpers/get-movie-recommendations');
+const Stream = require('../helpers/stream');
 
 
 router.get('/:id', async(req, res, next) => {
@@ -12,7 +13,9 @@ router.get('/:id', async(req, res, next) => {
     const current_url = req.protocol + '://' + req.get('host') + req.originalUrl;
     const data = await movieData(id)
     const recommendations = await movieRecommendations(id)
-    res.render('single-movie', { data, owl: true, recommendations, current_url, cast: data.credits.cast });
+    const iframeSrc = await Stream(id);
+    // console.log(src);
+    res.render('single-movie', { data, owl: true, recommendations, current_url, cast: data.credits.cast, iframeSrc });
 });
 
 router.use('/*', function(req, res, next) {

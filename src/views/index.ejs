@@ -13,7 +13,7 @@
                                     <%var url %>
                                     <%var title %>
                                         <% title = data[i].media_type == 'tv' ? data[i].name : data[i].title %> 
-                                        <% url = '/movie/'+ data[i].id + '&title=' + title %>
+                                        <% url = '/movie/'+ data[i].id %>
                                             <% if (data[i].media_type == 'tv') { %>
                                                 <% url='/tv/' + data[i].id %>
                                                     <% } %>
