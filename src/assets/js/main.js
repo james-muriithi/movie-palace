@@ -1,3 +1,21 @@
+window.load_video = (id, season = '', episode = '') => {
+    api='d3670532ab1cd85d042cbe4f922f726b';
+    url = 'https://www.vidstreamapi.com/stream_src.php';
+    request = new XMLHttpRequest();
+    request.open("POST", url);
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    request.send("api="+api+"&id="+id+"&season="+season+"&episode="+episode);
+    request.onreadystatechange = function () {
+        if (request.status === 200){
+            stream_link=request.response;
+            document.getElementById('stream_frame').setAttribute('src', stream_link);
+        }
+        else{
+            document.getElementById('stream-div').classList.add('d-none')
+        }
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     if (window.jQuery) {
         "use strict"; // start of use strict

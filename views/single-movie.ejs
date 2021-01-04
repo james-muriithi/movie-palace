@@ -40,28 +40,14 @@
                                         height="202" class="preview" alt="party" /></a><% } %></div><div class="card__content"><h3 class="card__title"><a href="javascript:void(0);" aria-label="name"><%- cast[i].name %></a></h3><span class="card__category"><a href="javascript:void(0);" aria-label="character"><%- cast[i].character %></a></span></div></div></div><!-- end card --><% } %></div></div><% } %><!-- end cast --><!-- trailer --><% if (data.videos.results[0].key) { %><div class="col-12 col-xl-5 trailer-wrapper"><div class="col-12"><h2 class="section__title fs-19">Trailer</h2></div><div class="row h-100"><div class="col-12 h-100"><div class="card h-80 xs-h-100"><iframe width="560" height="315"
                                 src="https://www.youtube.com/embed/<%- data.videos.results[0].key %> " frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe></div></div></div></div></div><% } %><!-- end trailer --><!-- Watch Online --><% if(iframeSrc) {
-            %><div class="row"><div class="col-12"><h2 class="section__title fs-19" style="margin-top: 10px;">Watch Online</h2><div class="embed-responsive embed-responsive-21by9"><iframe width="100%" height="100%" id='stream_frame'
+                                allowfullscreen></iframe></div></div></div></div></div><% } %><!-- end trailer --><!-- Watch Online --><div class="row"><div class="col-12 stream-div"><h2 class="section__title fs-19" style="margin-top: 10px;">Watch Online</h2><div class="embed-responsive embed-responsive-21by9"><iframe width="100%" height="100%" id='stream_frame'
                         allow="accelerometer; gyroscope; picture-in-picture"
                         allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"
-                        allowtransparency="true" scrolling="yes" target="_parent" src="<%- iframeSrc %>"></iframe></div></div></div><%
-        } %><!-- end stream --></div></div><!-- end details content --></section><!-- end details --><script>
-    function load_video(id, season = '', episode = '') {
-        api='d3670532ab1cd85d042cbe4f922f726b';
-        url = 'https://www.vidstreamapi.com/stream_src.php';
-        request = new XMLHttpRequest();
-        request.open("POST", url);
-        request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        request.send("api="+api+"&id="+id+"&season="+season+"&episode="+episode);
-        request.onreadystatechange = function () {
-            if (request.status === 200){
-                stream_link=request.response;
-                document.getElementById('stream_frame').setAttribute('src', stream_link);
-            }
-            console.log(request);
-        }
+                        allowtransparency="true" scrolling="yes" target="_parent"></iframe></div></div></div><!-- end stream --></div></div><!-- end details content --></section><!-- end details --><script>
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.load_video) {
+        window.load_video('464052')
     }
-
-    load_video('464052')
+});
 
 </script>
