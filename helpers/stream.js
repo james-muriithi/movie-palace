@@ -10,11 +10,15 @@ const iframeSrc = (id, season = '', episode = '') => {
         episode
     }
 
-    return axios.post(STREAM_URL, qs.stringify(params),{
+    return axios.post(STREAM_URL, qs.stringify(params), {
         headers: {
             'Content-Type': "application/x-www-form-urlencoded"
         }
     }).then(data => data.data)
+        .catch((errror) => {
+            console.log(error);
+            return null;
+        });
 }
 
 module.exports = iframeSrc
