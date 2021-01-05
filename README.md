@@ -1,7 +1,14 @@
 [![dependencies Status](https://david-dm.org/james-muriithi/movie-palace/status.svg)](https://david-dm.org/james-muriithi/movie-palace) [![Heroku](https://heroku-badge.herokuapp.com/?app=movie-palace)](https://moviepalace.herokuapp.com/)
+![Build](https://github.com/james-muriithi/movie-palace/workflows/Build/badge.svg?branch=master)
 # Movie Palace
-[Demo](https://moviepalace.herokuapp.com/)
-![](screenshot.png)
+### [Demo](https://moviepalace.herokuapp.com/)
+## Screenshots
+### Home
+![](screenshots/screenshot.png)
+### Streaming Movies
+![](screenshots/screenshot2.png)
+### Tv Shows Episodes
+![](screenshots/screenshot3.png)
 
 ## Setup 
 1. Clone this repository:
