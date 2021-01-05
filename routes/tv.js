@@ -1,18 +1,20 @@
 const express = require('express');
 
 const router = express.Router();
-const tvData = require('../helpers/get-tvshow');
+const {getTvShow, getTvEpisodes} = require('../helpers/get-tvshow');
 const movieRecommendations = require('../helpers/get-tv-recommendations');
 const tvcredits = require('../helpers/get-tv-credits');
 
 
 router.get('/:id', async(req, res, next) => {
     const id = req.params.id
-    const data = await tvData(id)
+    const data = await getTvShow(id)
+    const episodes = await getTvEpisodes(id);
     const cast = await tvcredits(id)
     const current_url = req.protocol + '://' + req.get('host') + req.originalUrl;
     const recommendations = await movieRecommendations(id)
-    res.render('single-tvshow', { data, owl: true, recommendations, cast: cast.cast, current_url });
+    console.log(episodes);
+    res.render('single-tvshow', { data, owl: true, recommendations, cast: cast.cast, current_url, episodes });
 });
 
 router.use('/*', function(req, res, next) {

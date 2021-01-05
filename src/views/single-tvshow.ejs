@@ -143,7 +143,22 @@
                                             <div class="accordion" id="accordion">
                                                 <% data.seasons.forEach((element, index) => { %>
                                                     <div class="accordion__card">
-                                                        <div class="card-header" id="heading<%- element.id %>">
+                                                        <style>
+                                                            .img-season{
+                                                                height: 60px!important;
+                                                                width: 50px!important;
+                                                            }
+                                                            .my-auto{
+                                                                margin-top: 5px;
+                                                                margin-bottom: 5px;
+                                                            }
+                                                        </style>
+                                                        <div class="card-header d-flex" id="heading<%- element.id %>">
+                                                            <% if (element.poster_path) { %>
+                                                                <a href="#" data-href="https://image.tmdb.org/t/p/w92<%- element.poster_path %>" class="boxout1 progressive replace d-flex h-100">
+                                                                    <img src="https://res.cloudinary.com/james-m/image/upload/c_scale,h_40/v1593129344/party_va3kjs.jpg" class="preview img-thumbnail img-season my-auto d-flex" alt="party" />
+                                                                </a>
+                                                            <% } %>
                                                             <button type="button" data-toggle="collapse" data-target="#collapse<%- element.id %>" aria-expanded="<%- index == 0 %>" aria-controls=" collapse<%- element.id %>">
                                                              <span>Season: <%- " "+element.season_number %></span>
                                                             <span>
@@ -153,50 +168,30 @@
                                                         </div>
 
                                                         <div id="collapse<%- element.id %>" class="collapse <%- index == 0 ? 'show': '' %>" aria-labelledby="heading<%- element.id %>" data-parent="#accordion">
-                                                            <div class="card-body">
-                                                                <%- data.seasons.overview %>
-                                                                    <!-- <table class="accordion__list">
-                                                                    <thead>
-                                                                        <tr>
-                                                                            <th>#</th>
-                                                                            <th>Title</th>
-                                                                            <th>Air Date</th>
-                                                                        </tr>
-                                                                    </thead>
-    
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <th>1</th>
-                                                                            <td>Pilot</td>
-                                                                            <td>Tuesday, November 16th, 2004</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>2</th>
-                                                                            <td>Paternity</td>
-                                                                            <td>Tuesday, November 23rd, 2004</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>3</th>
-                                                                            <td>Occam's Razor</td>
-                                                                            <td>Tuesday, November 30th, 2004</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>4</th>
-                                                                            <td>Maternity</td>
-                                                                            <td>Tuesday, December 7th, 2004</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>5</th>
-                                                                            <td>Damned If You Do</td>
-                                                                            <td>Tuesday, December 14th, 2004</td>
-                                                                        </tr>
-                                                                        <tr>
-                                                                            <th>6</th>
-                                                                            <td>The Socratic Method</td>
-                                                                            <td>Tuesday, December 21st, 2004</td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table> -->
+                                                            <div class="card-body" style="color: rgba(255,255,255,.5);">
+                                                                <%- element.overview %>
+
+                                                                <% if (episodes && episodes[index]) { %>
+                                                                    <table class="accordion__list">
+                                                                        <thead>
+                                                                            <tr>
+                                                                                <th>#</th>
+                                                                                <th>Name</th>
+                                                                                <th>Air Date</th>
+                                                                            </tr>
+                                                                        </thead>
+                                                                        <tbody>
+                                                                            <% var seasonEpisodes = episodes[index].episodes ? episodes[index].episodes: []  %>
+                                                                            <% seasonEpisodes.forEach(el => { %>
+                                                                                <tr>
+                                                                                    <th><%= el.episode_number %> </th>
+                                                                                    <td><%= el.name %> </td>
+                                                                                    <td><%= el.air_date %> </td>
+                                                                                </tr>
+                                                                            <% }); %>
+                                                                        </tbody>
+                                                                    </table>
+                                                                <% } %>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -230,11 +225,11 @@
                                                                             <div class="card__cover recommendations">
                                                                                 <% if (recommendations[i].poster_path) { %>
                                                                                     <a href="" data-href="https://image.tmdb.org/t/p/w154<%- recommendations[i].poster_path %>" class="boxout1 progressive replace" aria-label="poster">
-                                                                                        <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" class="preview" alt="party" />
+                                                                                        <img src="https://res.cloudinary.com/james-m/image/upload/c_scale,h_237,w_160/v1593129344/party_va3kjs.jpg" class="preview" alt="party" />
                                                                                     </a>
                                                                                     <% } else { %>
                                                                                         <a href="" data-href="/img/covers/posterplaceholder.jpg" class="boxout1 progressive replace" aria-label="poster">
-                                                                                            <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" class="preview" alt="party" />
+                                                                                            <img src="https://res.cloudinary.com/james-m/image/upload/c_scale,h_237,w_160/v1593129344/party_va3kjs.jpg" class="preview" alt="party" />
                                                                                         </a>
                                                                                         <% } %>
                                                                                             <a href="/tv/<%- recommendations[i].id %>" class="card__play" aria-label="icon-play">
@@ -296,11 +291,11 @@
                                                                         <div class="card__cover cast">
                                                                             <% if (cast[i].profile_path) { %>
                                                                                 <a href="" data-href="https://image.tmdb.org/t/p/w185<%- cast[i].profile_path %>" class="boxout1 progressive replace" aria-label="poster">
-                                                                                    <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" class="preview" alt="party" />
+                                                                                    <img src="https://res.cloudinary.com/james-m/image/upload/c_scale,h_237,w_160/v1593129344/party_va3kjs.jpg" class="preview" alt="party" />
                                                                                 </a>
                                                                                 <% } else { %>
                                                                                     <a href="" data-href="/img/covers/posterplaceholder.jpg" class="boxout1 progressive replace" aria-label="poster">
-                                                                                        <img src="https://ucarecdn.com/dc3dad83-e7b5-44cd-841a-dbf4000005d6/-/resize/200x200/-/quality/lightest/party.jpg" height="202" class="preview" alt="party" />
+                                                                                        <img src="https://res.cloudinary.com/james-m/image/upload/c_scale,h_237,w_160/v1593129344/party_va3kjs.jpg" height="202" class="preview" alt="party" />
                                                                                     </a>
                                                                                     <% } %>
                                                                         </div>

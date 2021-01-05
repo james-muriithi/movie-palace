@@ -25,4 +25,25 @@ let getTvShow = async(id) => {
         });
 }
 
-module.exports = getTvShow;
+let getTvEpisodes = async (id) => {
+    const tvData = await getTvShow(id)
+    let number_of_seasons = tvData.seasons ? tvData.seasons.length : 0;
+    let episodes = [];
+    for (let index = 0; index < number_of_seasons; index++) {
+        let seasonUrl = `${urls.API_URL}tv/${id}/season/${index}?api_key=${urls.API_KEY}&language=en-US`
+        axios.get(seasonUrl)
+        .then((response) => response.data)
+        .then(async res => {
+            let i = parseInt(res.season_number);
+            episodes.splice(i,0,res);
+        })
+        .catch((err) => {
+            console.log(err)
+            episodes.push({})
+        });
+    }
+
+    return episodes;
+}
+
+module.exports = {getTvShow, getTvEpisodes};
